@@ -6,6 +6,8 @@ import { useChat, Message } from "ai/react";
 
 import ChatInput from "./ChatInput";
 
+import Header from './Header';
+
 export const ChatWrapper = ({ sessionID, initialMessages }: { sessionID: string, initialMessages: Message[] }) => {
   const { messages, input, handleInputChange, handleSubmit, setInput } = useChat({
     api: "/api/chat-stream",
@@ -16,9 +18,9 @@ export const ChatWrapper = ({ sessionID, initialMessages }: { sessionID: string,
 
   return (
     <div className="relative min-h-full bg-zinc-900 flex divide-y divide-zinc-700 flex-col justify-between ">
-      <div className="flex-1 text-black bg-zinc-800 justify-between flex flex-col ">
+      {/* <div className="flex-1 text-black bg-zinc-800 justify-between flex flex-col ">
         {JSON.stringify(messages)}
-      </div>
+      </div> */}
 
   
 
